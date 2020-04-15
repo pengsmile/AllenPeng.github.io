@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome</title>
+    <link rel="shortcut icon" href="icon/deer.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if IE]>
+        <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container demo-1">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <canvas id="demo-canvas"></canvas>
+                <h1 class="main-title animated fadeInRight">Welcome </h1>
+                <div class="switch">
+                    <div class="toggle">
+                        <input checked id="check" type="checkbox">
+                        <span class="button"></span>
+                        <span class="label"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="audio" loop src="audio/Fabled - Journeys.mp3"></audio>
+    <!-- /container -->
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/EasePack.min.js"></script>
+    <script src="js/rAF.js"></script>
+    <script src="js/demo-1.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function() {
+            var player = function() {
+                    var audio = document.getElementById('audio');
+                    audio.volume = 0.3;
+                    audio.play();
+                }
+                // setTimeout(player, 2000);
+            player();
+            $('#check').on('click', function() {
+                if (!$('#check').is(':checked')) {
+                    play(true);
+                } else {
+                    play(false);
+                }
+            })
+        })
+
+        function play(isPlaying) {
+            var player = document.querySelector('#audio');
+            if (isPlaying) {
+                // 如果正在播放, 停止播放并停止读取此音乐文件
+                player.pause();
+                player.src = '';
+            } else {
+                player.src = 'audio/Fabled - Journeys.mp3';
+                player.play();
+            }
+        }
+    </script>
+</body>
+
+</html>

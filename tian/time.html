@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="time"></p>
+    <script>
+        // Timedifference();
+        future();
+        setInterval(function() {
+            // Timedifference();
+            future();
+        }, 1000);
+        // function getTheTime() {
+        //     var t = new Date() - new Date(2017, 5, 20);
+        //     var d = Math.floor(t / 1000 / 60 / 60 / 24);
+        //     t -= d * 1000 * 60 * 60 * 24;
+        //     var h = Math.floor(t / 1000 / 60 / 60);
+        //     t -= h * 1000 * 60 * 60;
+        //     var m = Math.floor(t / 1000 / 60);
+        //     t -= m * 1000 * 60;
+        //     var s = Math.floor(t / 1000);
+        //     return d + "天" + h + "小时" + m + "分钟" + s + "秒";
+        // }
+
+        // 从历史某一刻至今天时间
+        function Timedifference() {
+            var date1 = new Date('2017-05-20'); //开始时间
+            var date2 = new Date(); //结束时间
+            var date3 = date2.getTime() - date1.getTime(); //时间差的毫秒数
+
+            //计算出相差天数
+            var days = Math.floor(date3 / (24 * 3600 * 1000));
+            //计算出小时数
+            var leave1 = date3 % (24 * 3600 * 1000) //计算天数后剩余的毫秒数
+            var hours = Math.floor(leave1 / (3600 * 1000))
+                //计算相差分钟数
+            var leave2 = leave1 % (3600 * 1000) //计算小时数后剩余的毫秒数
+            var minutes = Math.floor(leave2 / (60 * 1000))
+                //计算相差秒数
+            var leave3 = leave2 % (60 * 1000) //计算分钟数后剩余的毫秒数
+            var seconds = Math.round(leave3 / 1000)
+            document.getElementById('time').innerHTML = days + '天' + hours + '时' + minutes + '分' + seconds + '秒';
+        }
+
+        // 未来某一刻至今天倒计时
+        function future() {
+            var future = new Date('2040-01-01');
+            var date3 = future.getTime() - new Date().getTime();
+            // var days = Math.floor(now / (24 * 3600 * 1000));
+            // var leave1 = days % (24 * 3600 * 1000);
+            // var hours = Math.floor(leave1 / (3600 * 1000));
+            // var leave2 = leave1 % (3600 * 1000);
+            // var minutes = Math.floor(leave2 / (60 * 1000));
+            // var leave3 = leave2 % (60 * 1000);
+            // var seconds = Math.round(leave3 / 1000);
+            // document.getElementById('time').innerHTML = days + '天' + hours + '时' + minutes + '分' + seconds + '秒';
+            //计算出相差天数
+            var days = Math.floor(date3 / (24 * 3600 * 1000));
+            //计算出小时数
+            var leave1 = date3 % (24 * 3600 * 1000) //计算天数后剩余的毫秒数
+            var hours = Math.floor(leave1 / (3600 * 1000))
+                //计算相差分钟数
+            var leave2 = leave1 % (3600 * 1000) //计算小时数后剩余的毫秒数
+            var minutes = Math.floor(leave2 / (60 * 1000))
+                //计算相差秒数
+            var leave3 = leave2 % (60 * 1000) //计算分钟数后剩余的毫秒数
+            var seconds = Math.round(leave3 / 1000)
+            document.getElementById('time').innerHTML = days + '天' + hours + '时' + minutes + '分' + seconds + '秒';
+        }
+    </script>
+</body>
+
+</html>

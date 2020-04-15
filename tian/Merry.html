@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>圣诞节快乐</title>
+    <meta charset="utf-8">
+    <meta name="author" content="ponce">
+    <meta name="description" content="">
+    <meta name="pubdate" content="">
+    <link rel="icon" type="image/png" href="http://js1k.com/favicon.png">
+    <link rel="canonical" href="http://js1k.com/2010-xmas/demo/855">
+    <link rel="alternate" type="application/rss+xml" title="New demo feed" href="http://js1k.com/feed.xml">
+    <link rel="shortlink" href="http://js1k.com/855">
+    <script>
+        setTimeout(function() {
+            var ga = document.createElement('script');
+            ga.async = true;
+            ga.defer = true;
+            ga.src = 'http://www.google-analytics.com/ga.js';
+            ga.onload = function() {
+                try {
+                    _gat._getTracker('UA-19882353-1')._trackPageview();
+                } catch (e) {
+                    window.console && console.log("ga fail :'( ");
+                };
+            };
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        }, 10);
+    </script>
+    <style>
+        /* http://qfox.nl/notes/333 */
+        
+        body,
+        html,
+        iframe {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            width: 100%;
+            height: 100%
+        }
+        
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -10;
+            box-sizing: border-box
+        }
+        
+        header {
+            position: relative;
+            z-index: 1;
+            height: 47px;
+            padding-top: 2px;
+            border-bottom: 1px solid #000;
+            box-shadow: 0 -10px 25px #ccc inset;
+            background-color: #eee
+        }
+        
+        aside,
+        div,
+        h1,
+        {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: center;
+            font-size: 16px;
+            font-weight: inherit;
+            line-height: 22px;
+            padding: 0;
+            margin: 0;
+            cursor: default
+        }
+        
+        aside,
+        h1 {
+            display: inline
+        }
+        
+        a {
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px dashed #000
+        }
+        
+        a:hover {
+            border-bottom: 1px solid red
+        }
+        
+        a[href="0"] {
+            text-decoration: line-through;
+            pointer-events: none;
+            border-bottom: 0;
+            color: #ccc
+        }
+        
+        .button {
+            float: left;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            padding: 0;
+            margin: 2px 0 0 10px;
+            border: 1px solid #888;
+            border-color: #ddd #888 #888 #ddd;
+            font-family: sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            cursor: pointer
+        }
+        
+        .button:hover {
+            color: red;
+            border-bottom-color: #888
+        }
+        
+        .r {
+            margin-right: 10px
+        }
+        
+        time {
+            display: none
+        }
+        
+        p {
+            color: white;
+            text-align: center;
+            font-size: 5em;
+            padding-top: 8em;
+        }
+        
+        p span {
+            text-shadow: 5px 5px 15px #f9f9f9;
+            letter-spacing: 15px;
+            display: block;
+        }
+        
+        p span.happy {
+            display: block;
+            font-size: 60px;
+            padding-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p>
+        <span>Merry Christmas</span>
+        <span class="happy">圣诞节快乐</span>
+    </p>
+    <!-- <audio autoplay="autoplay" loop="loop" src="./Various Artists - Jingle Bells.mp3"></audio> -->
+    <audio id="myaudio" src="./Various Artists - Jingle Bells.mp3" preload="auto" loop="loop" autoplay="autoplay">
+    </audio>
+    <script src="./jquery-2.1.1.min.js"></script>
+    <script type="demo">
+        for(p in a)a[p[0]+(p[6]||'')]=a[p];var M=Math,C=M.cos,S=M.sin,R=M.random,T=0,x=[],y=[],W=innerWidth,H=innerHeight,L=2047,Z=100,V=20,N=511,M=1337;c.width=W,b.style.overflow='hidden',b.style.margin='0px',c.height=H;g='globalAlpha';h='fillStyle';for(i=N;i--;){x[i]=L*R();y[i]=L*R()}setInterval(function(){T+=1/V;a[g]=0.2;function
+        m(c){a[h]=c}m('#002');a.fc(0,0,W,H);a[g]=1;u=1;m('#ffc');for(i=0;i
+        <N/3;++i){d=u=(u*M+1)&L;u=(u*M+1)&L;if(C(T*Z+i)<0.5){a.fx( "\u2605",d,u)}}a.ba();a.arc(2*W/3,H/3,40,0,6.3,1);a.ca();a.fill();m( '#cfc');B=H-V;for(j=0;j<5;++j){s=90-j*V;a.font=s+ "px serif";F=1;for(i=0;i<W;i+=(F=(F*M)%Z)){a.fx( "\u25B2",i-s/2,B+S(i)*30);}B-=s/2;}m(
+            '#eef');for(i=N;i--;){e=x[i];f=y[i];a.fx( "\u06DE",e,f);y[i]=(f+1)%L;x[i]=(e+C(i+T)/3)%L}for(i=N*3;i--;){a.fc((x[i&N]+i)&L,(y[i&N]+i)&L,1,1)}for(i=W;i--;){d=Z+V*S(i/Z)+S(i/10);a.fc(i,H-d,1,d)}},50); </script>
+            <script>
+                (function() {
+                    var doc = document;
+                    // var header = doc.getElementsByTagName("header")[0];
+                    // var firstChild = header.firstChild;
+                    var p = doc.getElementsByClassName("p")[0];
+                    var n = doc.getElementsByClassName("n")[0];
+                    // header.insertBefore(p, firstChild);
+                    // header.insertBefore(n, firstChild);
+                    // header.appendChild(doc.getElementsByTagName("p")[0])
+                })();
+                (function reload() {
+                    var doc = document;
+                    // var header = doc.getElementsByTagName("header")[0];
+                    var iframe = doc.createElement("iframe");
+                    doc.body.appendChild(iframe);
+                    var iwin = iframe.contentWindow;
+                    var idoc = iframe.contentDocument;
+                    idoc.open();
+                    idoc.close();
+                    idoc.write('<!doctype html><head><meta charset="utf-8"><body>');
+                    idoc.head.innerHTML = "<style>\n" + "html, body { margin: 0; padding: 0; border: 0; width: 100%; height: 100%; }\n" + "</style>\n";
+                    idoc.body.innerHTML = "\n\t\t" + "<canvas" + ' id="c"' + '' + "></canvas>\n" +
+                        (true ? "<script>\x3c/script>\n" : "") + "";
+                    var Audio = iwin.Audio;
+                    iwin.Audio = function(x) {
+                        return new Audio(x)
+                    };
+                    if (true) {
+                        var canvas = idoc.getElementsByTagName("canvas")[0];
+                        iwin.a = canvas.getContext("2d");
+                        iwin.b = idoc.body;
+                        iwin.c = canvas;
+                        var p2d = iwin.Path2D;
+
+                        function wrap(ctx) {
+                            var fill = ctx.fill,
+                                clip = ctx.clip,
+                                stroke = ctx.stroke;
+                            ctx.scale = ctx.scale;
+                            ctx.drawFocusIfNeeded = ctx.drawFocusIfNeeded;
+                            ctx.ellipse = ctx.ellipse;
+                            ctx.fill = function(r) {
+                                fill.call(ctx, r === "evenodd" ? "evenodd" : "nonzero")
+                            };
+                            ctx.stroke =
+                                function(p) {
+                                    if (p && p2d && p instanceof p2d) stroke.call(ctx, p);
+                                    else stroke.call(ctx)
+                                };
+                            ctx.clip = function(p) {
+                                if (p && p2d && p instanceof p2d) clip.call(ctx, p);
+                                else clip.call(ctx)
+                            };
+                            return ctx
+                        }
+                        if (false) {
+                            var cvs = iwin.c;
+                            var cNode = cvs.cloneNode;
+                            cvs.cloneNode = function() {
+                                var clone = cNode.apply(cvs, arguments);
+                                var cloneGet = clone.getContext;
+                                clone.getContext = function() {
+                                    return wrap(cloneGet.call(clone, "2d"))
+                                };
+                                return clone
+                            };
+                            var get = cvs.getContext;
+                            cvs.getContext = function() {
+                                return wrap(get.call(cvs, "2d"))
+                            }
+                        }
+                        if (true) wrap(iwin.a)
+                    }
+                    idoc.body.clientWidth;
+                    var demo = idoc.createElement("script");
+                    var scrpt = doc.querySelector('script[type="demo"]').textContent.replace(/m.location=m.location;/, "top.reload();");
+                    if (false) scrpt = "A=0,B=0;" + scrpt;
+                    demo.textContent = scrpt;
+                    idoc.body.appendChild(demo);
+                    idoc.close();
+                    iframe.contentWindow.focus();
+                    var r = doc.createElement("div");
+                    r.innerHTML = "&#8635;";
+                    r.className = "button r";
+                    r.title = "restart just the demo (local, without remote fetch)";
+                    window.reload = r.onclick = function() {
+                        doc.body.removeChild(iframe);
+                        r.parentElement.removeChild(r);
+                        iframe = null;
+                        r = null;
+                        idoc = null;
+                        reload()
+                    };
+                    var firstLine = doc.getElementsByTagName("div")[0];
+                    // header.insertBefore(r, firstLine)
+                })();
+            </script>
+            <script>
+                var audio = $('#myaudio');
+                var isPlaying = false;
+
+                function playAudio() {
+                    var audio = $('#myaudio');
+                    if (audio.attr('src') == undefined) {
+                        audio.attr('src', audio.data('src'));
+                    }
+                    audio[0].play();
+                    isPlaying = true;
+                }
+                $(function() {
+                    playAudio();
+                    document.addEventListener("WeixinJSBridgeReady", function() {
+                        WeixinJSBridge.invoke('getNetworkType', {}, function(e) {
+                            network = e.err_msg.split(":")[1]; //结果在这里
+                            playAudio();
+                        });
+                    }, false);
+                })
+            </script>
+</body>
+
+</html>
