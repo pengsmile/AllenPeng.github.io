@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-    <audio id="audio" loop src="audio/Fabled - Journeys.mp3"></audio>
+    <!-- <audio id="audio" loop src="audio/Fabled - Journeys.mp3"></audio> -->
     <!-- /container -->
     <script src="js/TweenLite.min.js"></script>
     <script src="js/EasePack.min.js"></script>
@@ -42,22 +42,22 @@
     <script src="js/demo-1.js"></script>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script>
-        $(function() {
-            var player = function() {
-                    var audio = document.getElementById('audio');
-                    audio.volume = 0.3;
-                    audio.play();
-                }
-                // setTimeout(player, 2000);
-            player();
-            $('#check').on('click', function() {
-                if (!$('#check').is(':checked')) {
-                    play(true);
-                } else {
-                    play(false);
-                }
-            })
-        })
+        // $(function() {
+        //     var player = function() {
+        //             var audio = document.getElementById('audio');
+        //             audio.volume = 0.3;
+        //             audio.play();
+        //         }
+        //         setTimeout(player, 2000);
+        //     player();
+        //     $('#check').on('click', function() {
+        //         if (!$('#check').is(':checked')) {
+        //             play(true);
+        //         } else {
+        //             play(false);
+        //         }
+        //     })
+        // })
 
         function play(isPlaying) {
             var player = document.querySelector('#audio');
